@@ -3,7 +3,7 @@
 echo -e "Please enter your pass: "
 read pass
 sudo yum install wget -y
-curl -LGO https://raw.githubusercontent.com/artembayguzhin/files/main/dante.sh
+wget https://raw.githubusercontent.com/artembayguzhin/files/main/dante.sh
 chmod 777 dante.sh
 sudo ./dante.sh
 sudo /etc/init.d/sockd adduser $pass $pass
