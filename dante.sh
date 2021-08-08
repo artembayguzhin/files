@@ -3,14 +3,6 @@
 
 if [ -s "/etc/os-release" ];then
 
-    if [ -n "$(echo ${os_name} | grep -Ei 'Debian|Ubuntu' )" ];then
-        printf "Current OS: %s\n" "${os_name}"
-        SYSTEM_RECOGNIZE="debian"
-
-    elif [ -n "$(echo ${os_name} | grep -Ei 'CentOS')" ];then
-        printf "Current OS: %s\n" "${os_name}"
-        SYSTEM_RECOGNIZE="centos"
-    fi
 elif [ -s "/etc/issue" ];then
     if [ -n "$(grep -Ei 'CentOS' /etc/issue)" ];then
         printf "Current OS: %s\n" "$(grep -Ei 'CentOS' /etc/issue)"
